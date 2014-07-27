@@ -35,7 +35,7 @@ router.get('/', function(req, res) {
         
         request.get(options, function(error, response, body) {
           if (!error && response.statusCode === 200) {
-            for(j=1;j<body.items.length; j++){
+            for(j=0;j<body.items.length; j++){
               try{console.log(body.items[i].track.artists[0].name);}
               catch(err){}
             }
