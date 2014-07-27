@@ -35,9 +35,8 @@ router.get('/', function(req, res) {
         
         request.get(options, function(error, response, body) {
           if(!error){
-            console.log(body.items);
-            for(j=0;j<body.length; j++){
-              console.log(body[i]);
+            for(j=0;j<body.items.length; j++){
+              console.log(body.items[i]);
             }
           }
         });
