@@ -4,9 +4,10 @@ var router = express.Router();
 /*
  * GET login page.
  */
-exports.home = function (req, res) {
-    res.render('login', { title: 'OSLPLANS' });
-};
+router.get('/', function(req, res) {
+  res.render('login', { title: 'Express' });
+});
+
 
 
 
