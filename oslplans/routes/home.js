@@ -35,8 +35,8 @@ router.get('/', function(req, res) {
         
         request.get(options, function(error, response, body) {
           if (!error && response.statusCode === 200) {
-            for(j=0;j<body.items.length; j++){
-              console.log(body.items[i].track);
+            for(j=1;j<body.items.length; j++){
+              console.log(body.items[i]);
             }
           }
         });
