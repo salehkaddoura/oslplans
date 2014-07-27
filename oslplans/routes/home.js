@@ -26,6 +26,17 @@ router.get('/', function(req, res) {
       console.log(body.items);
       for(i=0; i<body.items.length; i++){
         console.log(body.items[i].id);
+        options = {
+          url: 'https://api.spotify.com/v1/users/' + user_id + '/playlists/' + body.items[i].id + '/tracks',
+          headers: { 'Authorization': 'Bearer ' + access_token },
+          json: true
+        };
+        
+        request.get(options, function(error, response, body) {
+          for(j=0;j<body.items.length; j++){
+            console.log(body.items[i].artists.name);
+          }
+        });
       }
     });
   });
