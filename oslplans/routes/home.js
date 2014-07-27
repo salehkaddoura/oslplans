@@ -28,7 +28,7 @@ router.get('/', function(req, res) {
       for(i=0; i<body.items.length; i++){
         options3 = {
           //url: 'https://api.spotify.com/v1/users/' + user_id + '/playlists/' + body.items[i].id + '/tracks',
-          url: "https://api.spotify.com/v1/me/tracks",
+          url: "https://api.spotify.com/v1/me/tracks?offset=0&limit=20",
           headers: { 'Authorization': 'Bearer ' + access_token },
           json: true
         };
