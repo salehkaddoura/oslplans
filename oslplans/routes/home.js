@@ -31,6 +31,7 @@ router.get('/', function(req, res) {
           headers: { 'Authorization': 'Bearer ' + access_token },
           json: true
         };
+        console.log("requesting " + options.url);
         
         request.get(options, function(error, response, body) {
           console.log(body);
