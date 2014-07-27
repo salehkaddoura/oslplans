@@ -1,4 +1,6 @@
-express = require("express");
+var express = require("express");
+var request = require('request'); // "Request" library
+
 var router = express.Router();
 var querystring = require('querystring');
 var stateKey = 'spotify_auth_state';
@@ -34,7 +36,7 @@ router.get('/', function(req, res) {
       json: true
     };
 
-    req.post(authOptions, function(error, response, body) {
+    request.post(authOptions, function(error, response, body) {
       if (!error && response.statusCode === 200) {
 
         var access_token = body.access_token,
