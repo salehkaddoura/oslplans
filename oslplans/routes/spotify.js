@@ -1,7 +1,12 @@
-express = require("express");
+var express = require("express");
+var request = require('request'); // "Request" library
+
 var router = express.Router();
 var querystring = require('querystring');
 var stateKey = 'spotify_auth_state';
+var client_id = 'e43d7dee14a04daa96f38b64c8473005';
+var client_secret = 'f56d58b73187437c93ddccac9f264db1';
+var redirect_uri = 'http://osplans.ahv.io/spotify';
 
 router.get('/', function(req, res) {
 
@@ -49,13 +54,13 @@ router.get('/', function(req, res) {
         });
 
         // we can also pass the token to the browser to make requests from there
-        res.redirect('/#' +
+        res.redirect('/home?' +
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token
           }));
       } else {
-        res.redirect('/#' +
+        res.redirect('/home?' +
           querystring.stringify({
             error: 'invalid_token'
           }));
