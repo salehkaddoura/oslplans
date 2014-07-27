@@ -23,7 +23,7 @@ router.get('/', function(req, res) {
     };
     
     request.get(options2, function(error, response, body) {
-      console.log(body);
+      console.log(body.items);
     });
   });
   
