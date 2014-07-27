@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var request = require('request'); // "Request" library
 
+var artists=array();
+
 /* GET home page. */
 router.get('/', function(req, res) {
   access_token = req.query.access_token;
@@ -31,12 +33,15 @@ router.get('/', function(req, res) {
           headers: { 'Authorization': 'Bearer ' + access_token },
           json: true
         };
-        //console.log("requesting " + options.url);
         
         request.get(options, function(error, response, body) {
           if (!error && response.statusCode === 200) {
             for(j=0;j<body.items.length; j++){
-              try{console.log(body.items[i].track.artists[1].name);}
+              try{
+                if(artists.indexOf(body.items[i].track.artists[0].name)==-1){
+                  artists.push(body.items[i].track.artists[0].name);
+                }
+              }
               catch(err){}
             }
           }
