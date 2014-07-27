@@ -8,5 +8,9 @@ ssh -i oslplans.pem ubuntu@oslplans.ahv.io
 
 FACEBOOK 
 APP ID 266885866828122
-APP SECRET f090de2f85412570cb2263ba18ff0183
+
+
+SPOTIFY
+ClientID ee8c7d67ca8d4961a21be93af98da44d
+
 
