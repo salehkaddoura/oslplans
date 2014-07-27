@@ -18,21 +18,21 @@ router.get('/', function(req, res) {
   // use the access token to access the Spotify Web API
   request.get(options, function(error, response, body) {
     user_id = body.id;
-    options = {
+    options2 = {
       url: 'https://api.spotify.com/v1/users/' + user_id + '/playlists',
       headers: { 'Authorization': 'Bearer ' + access_token },
       json: true
     };
     
-    request.get(options, function(error, response, body) {
+    request.get(options2, function(error, response, body) {
       for(i=0; i<body.items.length; i++){
-        options = {
+        options3 = {
           url: 'https://api.spotify.com/v1/users/' + user_id + '/playlists/' + body.items[i].id + '/tracks',
           headers: { 'Authorization': 'Bearer ' + access_token },
           json: true
         };
         
-        request.get(options, function(error, response, body) {
+        request.get(options3, function(error, response, body) {
           if (!error && response.statusCode === 200) {
             for(j=0;j<body.items.length; j++){
               try{
