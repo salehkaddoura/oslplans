@@ -1,4 +1,6 @@
-
+var querystring = require('querystring');
+var express = require('express');
+var router = express.Router(); 
 /*
  * GET login page.
  */
@@ -6,9 +8,8 @@ exports.home = function (req, res) {
     res.render('login', { title: 'OSLPLANS' });
 };
 
-var querystring = require('querystring');
-var express = require('express');
-var router = express.Router();
+
+
 
 var generateRandomString = function(length) {
   var text = '';
