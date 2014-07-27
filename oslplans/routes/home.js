@@ -33,6 +33,7 @@ router.get('/', function(req, res) {
         };
         
         request.get(options, function(error, response, body) {
+          console.log(body);
           for(j=0;j<body.items.length; j++){
             console.log(body.items[i].artists.name);
           }
