@@ -14,7 +14,7 @@ router.get('/', function(req, res) {
   };
   
   request.get(options, function(error, response, body) {
-    console.log(JSON.parse(body));
+    console.log(body);
   });
   
   
