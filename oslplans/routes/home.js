@@ -34,10 +34,11 @@ router.get('/', function(req, res) {
         console.log("requesting " + options.url);
         
         request.get(options, function(error, response, body) {
-          if(!error) console.log(body.track);
-          /* for(j=0;j<body.items.length; j++){
-            console.log(body.items[i].track);
-          } */
+          if(!error){
+          for(j=0;j<body.items.length; j++){
+            console.log(body[i]);
+          }
+          }
         });
       }
     });
