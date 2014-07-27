@@ -18,8 +18,7 @@ router.get('/', function(req, res) {
   var state = req.query.state || null;
   var storedState = req.cookies ? req.cookies[stateKey] : null;
 
-  // disable state checking
-  if (false) {
+  if (state === null) {
     console.log("state mismatch:" + state + "!=" + storedState);
     res.redirect('/#' +
       querystring.stringify({
