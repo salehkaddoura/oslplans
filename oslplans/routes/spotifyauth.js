@@ -24,7 +24,7 @@ var generateRandomString = function(length) {
 var stateKey = 'spotify_auth_state';
 var client_id = 'e43d7dee14a04daa96f38b64c8473005';
 var client_secret = 'f56d58b73187437c93ddccac9f264db1';
-var redirect_uri = 'http://osplans.ahv.io/spotify';
+var redirect_uri = 'http://osplans.ahv.io/home';
 
 /* GET spotify login page. */
 router.get('/', function(req, res) {
