@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request'); // "Request" library
+var querystring = require('querystring');
 
 var artists=new Array();
 
