@@ -14,8 +14,7 @@ router.get('/', function(req, res) {
   };
   
   request.get(options, function(error, response, body) {
-    user_id = JSON.parse(body).id;
-    console.log(user_id);
+    console.log(JSON.parse(body));
   });
   
   
