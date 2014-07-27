@@ -28,7 +28,7 @@ router.get('/', function(req, res) {
   };
 
   request.post(authOptions, function(error, response, body) {
-    if (response.statusCode === 200) {
+    if (!error && response.statusCode === 200) {
 
       var access_token = body.access_token,
           refresh_token = body.refresh_token;
@@ -52,6 +52,8 @@ router.get('/', function(req, res) {
           refresh_token: refresh_token
         })); */
     } else {
+      console.log(error);
+      console.log(response.statusCode);
       res.redirect('/home?' +
         querystring.stringify({
           error: 'invalid_token'
