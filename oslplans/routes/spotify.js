@@ -2,6 +2,7 @@ express = require("express");
 var router = express.Router();
 var querystring = require('querystring');
 var stateKey = 'spotify_auth_state';
+var redirect_uri = 'http://osplans.ahv.io/spotify';
 
 router.get('/', function(req, res) {
 
