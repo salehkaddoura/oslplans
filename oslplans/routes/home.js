@@ -16,6 +16,7 @@ router.get('/', function(req, res) {
   };
   
   // use the access token to access the Spotify Web API
+  try{
   request.get(options, function(error, response, body) {
     user_id = body.id;
     options = {
@@ -37,18 +38,20 @@ router.get('/', function(req, res) {
         request.get(options, function(error, response, body) {
           if (!error && response.statusCode === 200) {
             for(j=0;j<body.items.length; j++){
-              try{
+              
                 if(artists.indexOf(body.items[i].track.artists[0].name)==-1){
                   artists.push(body.items[i].track.artists[0].name);
                 }
-              }
-              catch(err){}
+              
+              
             }
           }
         });
       }
     });
   });
+  }
+  catch(err){}
   
   console.log(artists);
   
