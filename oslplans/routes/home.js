@@ -50,6 +50,8 @@ router.get('/', function(req, res) {
     });
   });
   
+  console.log(artists);
+  
   res.render('home', { title: 'Express' });
 });
 
