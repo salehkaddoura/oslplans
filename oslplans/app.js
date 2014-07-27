@@ -15,7 +15,11 @@ var login = require('./routes/login');
 >>>>>>> 94b8ff7ea76cc81d747ae7022c7494674d7a20a9
 =======
 var spotifyauth = require('./routes/spotifyauth');
+<<<<<<< HEAD
 >>>>>>> 9ab32a3cf941eb834717eb8f524dd78dcd4dea12
+=======
+var spotify = require('./routes/spotify');
+>>>>>>> fcf953821dc6167031b6f63975bef856c4a7f4c1
 
 var app = express();
 
@@ -33,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/spotifyauth', spotifyauth);
+app.use('/spotify', spotify);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
