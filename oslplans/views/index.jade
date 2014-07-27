@@ -1,4 +1,31 @@
-extends layout
+!!! 5
+html(lang='en')
+head
+    meta(charset='utf-8')
+    title OSL Plans
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='stylesheets/bootstrap-theme.css')
+    link(rel='stylesheet', href='stylesheets/style.css')
+    //
+       <link rel="stylesheet" href="css/bootstrap-theme.css"> 
+    script(type='text/javascript', src='javascripts/jquery-1.11.1.js')
+    script(type='text/javascript', src='javascripts/bootstrap.js')
+    //
+       HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries 
+    //
+       WARNING: Respond.js doesn't work if you view the page via file:// 
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body
+    .container
+      .title
+        h1.os-title
+          img(src='images/OutsidePlans.png')
+        h3.os-slogan
+          | 'These Plans are Schmakin'
+          h3
+      #osfblogin
+        h2.form-signing-heading(style='padding: 0; margin: 0 auto;') Login with Facebook
 
-block content
-  h1= "Welcome to Outside Plans"
