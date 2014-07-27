@@ -3,7 +3,7 @@ var router = express.Router();
 var request = require('request'); // "Request" library
 var querystring = require('querystring');
 
-var artists=new Array();
+artists=new Array();
 
 /* GET home page. */
 router.get('/', function(req, res) {
