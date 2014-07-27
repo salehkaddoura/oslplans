@@ -31,13 +31,13 @@ router.get('/', function(req, res) {
           headers: { 'Authorization': 'Bearer ' + access_token },
           json: true
         };
-        console.log("requesting " + options.url);
+        //console.log("requesting " + options.url);
         
         request.get(options, function(error, response, body) {
           if(!error){
-          for(j=0;j<body.length; j++){
-            console.log(body[i]);
-          }
+            for(j=0;j<body.length; j++){
+              console.log(body[i]);
+            }
           }
         });
       }
