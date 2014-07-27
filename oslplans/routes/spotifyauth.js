@@ -22,8 +22,8 @@ var generateRandomString = function(length) {
 };
 
 var stateKey = 'spotify_auth_state';
-var client_id = 'ee8c7d67ca8d4961a21be93af98da44d';
-var client_secret = '1bcfe0560f8b45de8d4cc2539bea5de3';
+var client_id = 'e43d7dee14a04daa96f38b64c8473005';
+var client_secret = 'f56d58b73187437c93ddccac9f264db1';
 var redirect_uri = 'http://osplans.ahv.io/spotify';
 
 /* GET spotify login page. */
