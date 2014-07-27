@@ -38,7 +38,7 @@ router.get('/', function(req, res) {
           if (!error && response.statusCode === 200) {
             for(j=0;j<body.items.length; j++){
               try{
-                if(artists.indexOf(body.items[i].track.artists[0].name)==-1){
+                if(body.items[i] && artists.indexOf(body.items[i].track.artists[0].name)==-1){
                   artists.push(body.items[i].track.artists[0].name);
                 }
               }
