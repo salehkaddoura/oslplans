@@ -1,9 +1,9 @@
-var querystring = require('querystring');
+/*var querystring = require('querystring');
 var express = require('express');
 var router = express.Router(); 
 /*
  * GET login page.
- */
+ 
 router.get('/', function(req, res) {
   res.render('login', { title: 'Express' });
 });
@@ -27,7 +27,7 @@ var client_id = 'ee8c7d67ca8d4961a21be93af98da44d';
 var client_secret = '1bcfe0560f8b45de8d4cc2539bea5de3';
 var redirect_uri = 'http://osplans.ahv.io/spotify';
 
-/* GET spotify login page. */
+/* GET spotify login page. 
 router.get('/', function(req, res) {
 
   var state = generateRandomString(16);
@@ -45,5 +45,5 @@ router.get('/', function(req, res) {
     }));
 });
 
-module.exports = router;
+module.exports = router; */
 

@@ -7,19 +7,9 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-<<<<<<< HEAD
-<<<<<<< HEAD
-var login = require('./routes/login.js');
-=======
-var login = require('./routes/login');
->>>>>>> 94b8ff7ea76cc81d747ae7022c7494674d7a20a9
-=======
 var spotifyauth = require('./routes/spotifyauth');
-<<<<<<< HEAD
->>>>>>> 9ab32a3cf941eb834717eb8f524dd78dcd4dea12
-=======
 var spotify = require('./routes/spotify');
->>>>>>> fcf953821dc6167031b6f63975bef856c4a7f4c1
+var home = require('./routes/home');
 
 var app = express();
 
@@ -38,6 +28,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/spotifyauth', spotifyauth);
 app.use('/spotify', spotify);
+app.use('/home', home);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
