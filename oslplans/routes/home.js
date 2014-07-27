@@ -7,7 +7,6 @@ var artists=new Array();
 /* GET home page. */
 router.get('/', function(req, res) {
   access_token = req.query.access_token;
-  console.log(access_token);
   
   var options = {
     url: 'https://api.spotify.com/v1/me',
