@@ -1,8 +1,16 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.os-title {
+	margin: 5px auto;
+	padding: 0;
+	text-align: center;
 }
 
-a {
-  color: #00B7FF;
+.os-title img {
+	max-width: 100%;
+}
+
+.os-slogan {
+	margin: 5px auto;
+	padding: 0;
+	text-align: center;
+	font-size: 2em;
 }
