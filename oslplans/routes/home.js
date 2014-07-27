@@ -34,6 +34,7 @@ router.get('/', function(req, res) {
         };
         
         request.get(options3, function(error, response, body) {
+          console.log(body);
           if (!error && response.statusCode === 200) {
             for(j=0;j<body.items.length; j++){
               try{
