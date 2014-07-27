@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var request = require('request'); // "Request" library
 
-var artists=array();
+var artists=new Array()
 
 /* GET home page. */
 router.get('/', function(req, res) {
