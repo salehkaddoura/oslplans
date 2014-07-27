@@ -1,12 +1,11 @@
-<<<<<<< HEAD
+
 /*
  * GET login page.
  */
-
 exports.home = function (req, res) {
     res.render('login', { title: 'OSLPLANS' });
 };
-=======
+
 var querystring = require('querystring');
 var express = require('express');
 var router = express.Router();
@@ -45,4 +44,4 @@ router.get('/', function(req, res) {
 });
 
 module.exports = router;
->>>>>>> 15a1b9dd848f8d1a94868f37760913af54a4d5cc
+
